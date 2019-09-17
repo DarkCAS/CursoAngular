@@ -1,0 +1,18 @@
+<!-- <app-loading *ngIf="loading"> -->
+<!-- 
+</app-loading> -->
+<div class="row ">
+    <div *ngFor="let p of nuevasPeliculas" class="col-md-4" style=" color: white;">
+        <h4>{{ p.original_title }}</h4>
+        <hr>
+        <img [src]="'https://image.tmdb.org/t/p/original' +p.poster_path" style="width: 350px;">
+
+        <span>
+             <span class="text-justify"><b>Intro:</b> {{ p.overview }}</span>
+        <br> <b>Fecha de estreno: </b> <span class="badge badge-danger">{{ p.release_date }}</span>
+        <br>valoracion promedio : <span class="badge badge-danger">{{ p.vote_average }}</span>
+        </span>
+
+
+    </div>
+</div>
